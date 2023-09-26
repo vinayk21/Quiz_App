@@ -10,7 +10,9 @@ function App() {
     let res = await axios.get(
       `https://gateway.marvel.com:443/v1/public/comics?ts=1&hash=ae1895a77e42f57a2ff88de40c57a3e6&apikey=99e9936c87d485c889aa77e299bdda7c`
     );
-    // console.log("res",res);
+    useEffect(()=>{
+      console.log("hello users")
+    },[])
     setApidata(res)
   };
   useEffect(() => {
