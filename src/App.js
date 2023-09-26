@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect,createContext, useState } from "react";
+import "./App.css";
+import axios from 'axios'
+import Home from "./Componets/Home";
 
+export  const senddata = createContext();
 function App() {
+  const [Apidata,setApidata] = useState();
+  const apidata = async () => {
+    let res = await axios.get(
+      `https://gateway.marvel.com:443/v1/public/comics?ts=1&hash=ae1895a77e42f57a2ff88de40c57a3e6&apikey=99e9936c87d485c889aa77e299bdda7c`
+    );
+    // console.log("res",res);
+    setApidata(res)
+  };
+  useEffect(() => {
+    apidata();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <senddata.Provider value={Apidata}>
+      <Home />
+    </senddata.Provider>
+     
+    </>
   );
 }
 
