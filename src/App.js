@@ -4,7 +4,7 @@ import axios from 'axios'
 import Home from "./Componets/Home";
 
 export  const senddata = createContext();
-function App() {
+function App() {    
   const [Apidata,setApidata] = useState();
   const apidata = async () => {
     let res = await axios.get(
@@ -13,7 +13,9 @@ function App() {
     useEffect(()=>{
       console.log("hello users")
     },[])
-   
+   useEffect(()=>{
+    console.log("hgfhgfhf");
+   },[])
     setApidata(res)
   };
   useEffect(() => {
