@@ -13,9 +13,7 @@ function App() {
     useEffect(()=>{
       console.log("hello users")
     },[])
-    useEffect(()=>{
-      console.log("ssssss");
-    },[])
+   
     setApidata(res)
   };
   useEffect(() => {
