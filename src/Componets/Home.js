@@ -46,7 +46,7 @@ const Home = () => {
      </div>
      <div className='options'>
    <div class="form-check">
-       <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"  onClick={(e)=> setAnswers({q1:"Andrea Ferro"}) }/>
+       <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"  onClick={(e)=> setAnswers({q1:"Andrea Ferro"})}/>
        <label class="form-check-label" for="flexRadioDefault1"  >Andrea Ferro</label><br></br>
        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onClick={(e)=> setAnswers({q1:"Adele Goldberg"}) }/>
        <label class="form-check-label" for="flexRadioDefault1"  >Adele Goldberg</label><br></br>
@@ -113,7 +113,7 @@ const Home = () => {
      <div className='options'>
    <div class="form-check">
        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onClick={()=>setAnswers({q4:"1980’s"})} />
-       <label class="form-check-label" for="flexRadioDefault1">1980’s</label><br></br>
+       <label class="form-check-label" for="flexRadioDefault1">1980s</label><br></br>
        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onClick={()=>setAnswers({q4:"1995"})} />
        <label class="form-check-label" for="flexRadioDefault1">1995</label><br></br>
        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" onClick={()=>setAnswers({q4:"1970"})} />
@@ -185,7 +185,7 @@ const Home = () => {
        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" onClick={()=>setAnswers({q7:"It does not support pointers"})}/>
        <label class="form-check-label" for="flexRadioDefault1"> It does not support pointers</label><br></br>
        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" onClick={()=>setAnswers({q7:" It doesn’t support all types of inheritance"})}/>
-       <label class="form-check-label" for="flexRadioDefault1"> It doesn’t support all types of inheritance</label>
+       <label class="form-check-label" for="flexRadioDefault1"> It doesnt support all types of inheritance</label>
     </div>
      </div>
      <button type="button" class="btn btn-success" style={{marginLeft:"700px",marginTop:"10px"}} onClick={()=>(setQustion7(false),setQustion8(true),setAllansweers([...Allanswers,Answers.q7]))}>Save&Next</button>

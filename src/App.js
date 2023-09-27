@@ -2,6 +2,7 @@ import { useEffect,createContext, useState } from "react";
 import "./App.css";
 import axios from 'axios'
 import Home from "./Componets/Home";
+import Quiz from "./Componets/Quiz";
 
 export  const senddata = createContext();
 function App() {    
@@ -21,7 +22,8 @@ function App() {
   return (
     <>
     <senddata.Provider value={Apidata}>
-      <Home />
+      {/* <Home /> */}
+      <Quiz/>
     </senddata.Provider>
      
     </>
